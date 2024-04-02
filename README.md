@@ -1,4 +1,4 @@
-# Paraphrase and Solve: Exploring and Exploiting the Impact of Surface Form on Mathematical Reasoning in Large Language Models
+# Paraphrase and Solve: Exploring and Exploiting the Impact of Surface Form on Mathematical Reasoning in Large Language Models (In Editing)
 
 ![Task](images/motivation.jpg)
 
