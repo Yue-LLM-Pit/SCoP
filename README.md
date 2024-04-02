@@ -10,6 +10,10 @@ The repository contains the code of the paper:
 > [!NOTE]
 > The repository is currently being edited.
 
+## Requirement
 ## Run
-
+Example:
+```shell
+python3 explore.py --data_fp data/sample.txt --SCN 4 --K 2 --outfp 'res.txt'
+```
 ## Cite
