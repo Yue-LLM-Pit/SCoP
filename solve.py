@@ -38,6 +38,8 @@ def parse_args():
         help="fp to save the results.",
     )
     
+    
+
     args = parser.parse_args()
 
     return args
@@ -133,8 +135,5 @@ if __name__ == "__main__":
     print(
         f'Done. Total Time: {stop - start: .4f}s, {(stop - start)/3600: .4f} h..'
     )
-    hpr, (g_acc, h_acc), (g_acc_tar, h_acc_tar) = utils.evaluate(qb)
-    
-    print(f'Hard Problem Ratio: {hpr}\nacc (SC): {g_acc}({h_acc})\nacc (SCoP): {g_acc_tar}({h_acc_tar})')
           
     print("Finished at:", datetime.datetime.now())
