@@ -112,3 +112,47 @@ def evaluate(qbank):
     h_acc_tar = np.mean([q['SCoP'] for q in qb_hard])  
     
     return hpr, (g_acc, h_acc), (g_acc_tar, h_acc_tar)
+
+
+def get_exemplars(qbank, theta = 0.1, N = 1):
+
+    '''theta: the margin of solve rate difference'''
+
+    res = []
+
+    for q in qbank:
+        
+        _, sr_o, _ = analyzer(q['correct'], q['solutions_original'])
+
+        for para_id, para_kth_solutions in enumerate(q['solutions_paraphrased']):
+        
+            _, sr_p, _ = analyzer(q['correct'], para_kth_solutions)
+
+            if sr_p >= sr_o + theta:
+
+                res.append((q['question'], q['paraphrased_questions'][para_id]))
+
+                break
+        
+        if len(res) >= N: break
+    
+    return res
+
+
+
+
+
+        
+       
+                 
+            
+    qb_hard = [q for q in qbank if q['is_hard'] == 1]
+    hpr = len(qb_hard)/len(qbank)
+
+    g_acc = np.mean([q['SC'] for q in qbank])
+    h_acc = np.mean([q['SC'] for q in qb_hard])
+    
+    g_acc_tar = np.mean([q['SCoP'] for q in qbank])
+    h_acc_tar = np.mean([q['SCoP'] for q in qb_hard])  
+    
+    return hpr, (g_acc, h_acc), (g_acc_tar, h_acc_tar)
