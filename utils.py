@@ -137,22 +137,3 @@ def get_exemplars(qbank, theta = 0.1, N = 1):
         if len(res) >= N: break
     
     return res
-
-
-
-
-
-        
-       
-                 
-            
-    qb_hard = [q for q in qbank if q['is_hard'] == 1]
-    hpr = len(qb_hard)/len(qbank)
-
-    g_acc = np.mean([q['SC'] for q in qbank])
-    h_acc = np.mean([q['SC'] for q in qb_hard])
-    
-    g_acc_tar = np.mean([q['SCoP'] for q in qbank])
-    h_acc_tar = np.mean([q['SCoP'] for q in qb_hard])  
-    
-    return hpr, (g_acc, h_acc), (g_acc_tar, h_acc_tar)
