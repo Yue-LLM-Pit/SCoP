@@ -12,8 +12,13 @@ The repository contains the code of the paper:
 
 ## Requirement
 ## Run
-Example:
+Example of solving a dataset
 ```shell
 python3 explore.py --data_fp data/sample.txt --SCN 4 --K 2 --outfp 'res.txt'
 ```
+Example of obtaining exemplars for in-context paraphrasing
+```shell
+python3 get_exemplars.py --data_fp res.txt --theta 0.1 --max_N 1 --outfp 'exemplars.txt'
+```
+
 ## Cite
