@@ -1,7 +1,7 @@
 # Paraphrase and Solve: Exploring and Exploiting the Impact of Surface Form on Mathematical Reasoning in Large Language Models
 
-![Task](images/motivation.jpg)
-![Task](images/scop_arch.jpg)
+![Motivation](images/motivation.jpg)
+![Framework](images/scop_arch.jpg)
 
 The repository contains the code of the paper:
 > **Paraphrase and Solve: Exploring and Exploiting the Impact of Surface Form on Mathematical Reasoning in Large Language Models (NAACL'2024)** 
